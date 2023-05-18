@@ -1,0 +1,64 @@
+ <h1>{{name}}</h1>
+
+  <h2>Users</h2>
+  <ul>
+    {{#each users}}
+      <li>
+        <p><strong>ID:</strong> {{this.id}}</p>
+        <p><strong>Name:</strong> {{this.name}}</p>
+        <p><strong>Gender:</strong> {{this.gender}}</p>
+        <p><strong>Age:</strong> {{this.age}}</p>
+
+        <h3>Friends</h3>
+        <ul>
+          {{#each this.friends}}
+            <li>
+              <p><strong>ID:</strong> {{this.id}}</p>
+              <p><strong>Name:</strong> {{this.name}}</p>
+              <p><strong>Gender:</strong> {{this.gender}}</p>
+              <p><strong>Age:</strong> {{this.age}}</p>
+
+              {{#if this.mutual_friends}}
+                <h4>Mutual Friends</h4>
+                <ul>
+                  {{#each this.mutual_friends}}
+                    <li>
+                      <p><strong>ID:</strong> {{this.id}}</p>
+                      <p><strong>Name:</strong> {{this.name}}</p>
+                      <p><strong>Gender:</strong> {{this.gender}}</p>
+                      <p><strong>Age:</strong> {{this.age}}</p>
+                    </li>
+                  {{/each}}
+                </ul>
+              {{/if}}
+            </li>
+          {{/each}}
+        </ul>
+
+        <h3>Groups</h3>
+        <ul>
+          {{#each this.groups}}
+            <li>
+              <p><strong>ID:</strong> {{this.id}}</p>
+              <p><strong>Name:</strong> {{this.name}}</p>
+              <p><strong>Description:</strong> {{this.description}}</p>
+
+              {{#if this.members}}
+                <h4>Members</h4>
+                <ul>
+                  {{#each this.members}}
+                    <li>
+                      <p><strong>ID:</strong> {{this.id}}</p>
+                      <p><strong>Name:</strong> {{this.name}}</p>
+                      <p><strong>Gender:</strong> {{this.gender}}</p>
+                      <p><strong>Age:</strong> {{this.age}}</p>
+                    </li>
+                  {{/each}}
+                </ul>
+              {{/if}}
+            </li>
+          {{/each}}
+        </ul>
+      </li>
+    {{/each}}
+  </ul>
