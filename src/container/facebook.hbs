@@ -1,10 +1,11 @@
  <h1>{{name}}</h1>
 
-  <h2>Users</h2>
+  
   <ul>
     {{#each users}}
+    <h1>Users ID {{this.id}}</h1>  
       <li>
-        <p><strong>ID:</strong> {{this.id}}</p>
+             
         <p><strong>Name:</strong> {{this.name}}</p>
         <p><strong>Gender:</strong> {{this.gender}}</p>
         <p><strong>Age:</strong> {{this.age}}</p>
