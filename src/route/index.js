@@ -753,7 +753,7 @@ router.get('/facebook', function (req, res) {
             ],
           },
         ],
-      },
+      }, // <-- Тут вставлений пропущений символ
       {
         id: 16,
         name: 'Amy Lee',
@@ -787,48 +787,46 @@ router.get('/facebook', function (req, res) {
                 ],
               },
             ],
-            groups: [
-              {
-                id: 3,
-                name: 'Travel Addicts',
-                description:'A group for people who love to travel and explore new places',
-                members: [
-                  {
-                    id: 22,
-                    name: 'Jackie Chen',
-                    gender: 'Female',
-                    age: 26,
-                  },
-                ],
-              },
-              {
-                id: 4,
-                name: 'Pet Lovers',
-                description:'A group for people who love their furry friends',
-                members: [
-                  {
-                    id: 16,
-                    name: 'Amy Lee',
-                    gender: 'Female',
-                    age: 30,
-                  },
-                  {
-                    id: 25,
-                    name: 'John Smith',
-                    gender: 'Male',
-                    age: 33,
-                  },
-                ],
-              },
-            ],
           },
         ],
-      },
-    ],
-  })
-  //                  ↑↑ сюди вводимо JSON дані
-})
-
+        groups: [
+          {
+            id: 3,
+            name: 'Travel Addicts',
+            description:'A group for people who love to travel and explore new places',
+            members: [{
+              id: 22,
+              name: 'Jackie Chen',
+              gender: 'Female',
+              age: 26,
+            },
+          ],
+        },
+        {
+          id: 4,
+          name: 'Pet Lovers',
+          description:'A group for people who love their furry friends',
+          members: [
+            {
+              id: 16,
+              name: 'Amy Lee',
+              gender: 'Female',
+              age: 30,
+            },
+            {
+              id: 25,
+              name: 'John Smith',
+              gender: 'Male',
+              age: 33,
+            },
+          ],
+        },
+      ],
+    }, // <-- Тут вставлений пропущений символ
+  ],
+});
+//                  ↑↑ сюди вводимо JSON дані
+});
 // ================================================================
 
 // Підключаємо роутер до бек-енду
