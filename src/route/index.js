@@ -757,14 +757,20 @@ router.get('/mac', function (req, res) {
           price: 19.99,
         },
       ],
+    },
+    })
+  })
 
+
+// ================================================================
+
+// router.get Створює нам один ентпоїнт
 
 router.get('/car', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('car', {
-    layout: 'basic',
     make: 'Toyota',
     model: 'Camry',
     year: 2022,
@@ -852,7 +858,10 @@ router.get('/car', function (req, res) {
         premium_paint: 595,
       },
       total: 28990,
-
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
 
 router.get('/facebook', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -1084,6 +1093,12 @@ router.get('/js', function (req, res) {
       {
         name: 'CSS-Tricks',
         type: 'blog',
+      },
+    ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
 
  
 // ================================================================
