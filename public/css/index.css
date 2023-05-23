@@ -1,8 +1,7 @@
 html {
-  max-width: 720px;
-}
-
-body {
+  max-width: 1920px;
+} 
+ body {
   margin: 32px;
   background: #fff;
 }
@@ -16,4 +15,4 @@ nav {
 
 section {
   padding: 16px;
-}
+} 
