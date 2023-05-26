@@ -12,8 +12,7 @@ var header = {
     salary: '600$ в місяц',
     address: 'Kyiv, Velika Zchitomirska, 33',
   },
-
-};
+}
 
 var footer = {
   social: {
@@ -30,7 +29,7 @@ var footer = {
       text: 'LinkedIn',
     },
   },
-};
+}
 // ================================================================
 
 // router.get Створює нам один ентпоїнт
@@ -40,9 +39,7 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {
-
-  })
+  res.render('index', {})
   //                  ↑↑ сюди вводимо JSON дані
 })
 
@@ -58,16 +55,14 @@ router.get('/summary', function (req, res) {
     header,
 
     main: {
-      summary:
-      {
+      summary: {
         title: 'Summary',
         big: true,
         text: `Open-minded for new technologies, with 1 years of experience in development.
        Whenever I start to work on a new project I learn the domain and try to understand 
        the idea of the project. Good teamplayer, every colleague is a friend to me.`,
       },
-      experience:
-      {
+      experience: {
         title: 'Other experience',
         big: false,
         text: `Pet project for parsing sport betting data from different platforms ( odds )
@@ -77,7 +72,6 @@ router.get('/summary', function (req, res) {
       },
     },
     footer,
-
   })
 })
 
@@ -121,12 +115,10 @@ router.get('/skills', function (req, res) {
         {
           name: 'React JS',
           point: 0,
-
         },
         {
           name: 'PHP',
           point: null,
-
         },
       ],
       hobbies: [
@@ -142,12 +134,11 @@ router.get('/skills', function (req, res) {
           name: 'football',
           isMain: true,
         },
-      ]
+      ],
     },
     footer,
   })
 })
-
 
 router.get('/education', function (req, res) {
   res.render('education', {
@@ -171,7 +162,7 @@ router.get('/education', function (req, res) {
         },
         {
           name: 'КНЕУ імені Вадима Гетьмана (КНЕУ)',
-          isEnd: false
+          isEnd: false,
         },
         {
           name: 'Києво-Могилянська академія (КМА)',
@@ -189,9 +180,9 @@ router.get('/education', function (req, res) {
         },
         {
           name: 'Kurs 3',
-          id: 3288
+          id: 3288,
         },
-      ]
+      ],
     },
     footer,
   })
@@ -240,7 +231,7 @@ router.get('/work', function (req, res) {
                 },
                 {
                   name: 'Node.js',
-                }
+                },
               ],
               awardsAmount: 2,
               awards: [
@@ -248,13 +239,10 @@ router.get('/work', function (req, res) {
                 { name: 'Very good/ perfomance!' },
               ],
             },
-
           ],
-
         },
-
       ],
-     },
+    },
     footer,
   })
 })
@@ -265,7 +253,7 @@ router.get('/person', function (req, res) {
   res.render('person', {
     layout: 'basic',
     page: {
-      title:'Person',
+      title: 'Person',
     },
     person: {
       name: 'Emma Johnson',
@@ -286,7 +274,6 @@ router.get('/person', function (req, res) {
             'Massachusetts Institute of Technology',
           graduationYear: 2012,
         },
-        
       ],
       workExperience: [
         {
@@ -539,7 +526,7 @@ router.get('/program', function (req, res) {
                 rating: 4.6,
               },
             },
-          }, 
+          },
         ],
       },
     },
@@ -758,9 +745,8 @@ router.get('/mac', function (req, res) {
         },
       ],
     },
-    })
   })
-
+})
 
 // ================================================================
 
@@ -1013,12 +999,11 @@ router.get('/facebook', function (req, res) {
             ],
           },
         ],
-    },
+      },
     ],
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
 
 router.get('/js', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -1099,8 +1084,6 @@ router.get('/js', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
-
- 
 // ================================================================
 router.get('/bootstrap', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
@@ -1109,15 +1092,10 @@ router.get('/bootstrap', function (req, res) {
   })
 })
 
-
-
 // ================================================================
-
-
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/task22', function (req, res) {
-  
   res.render('task22', {
     layout: 'basic',
     page_header: {
@@ -1169,8 +1147,7 @@ router.get('/task22', function (req, res) {
       },
     },
   })
-    
-  })
+})
 
 // router.get Створює нам один ентпоїнт
 
@@ -1239,8 +1216,6 @@ router.get('/task21', function (req, res) {
           url: 'https://getbootstrap.com/',
         },
       ],
-
-
     },
   })
   //                  ↑↑ сюди вводимо JSON дані
@@ -1377,10 +1352,7 @@ router.get('/task31', function (req, res) {
         },
         {
           name: 'The Persistence of Memory',
-          items: ['Painting', 
-          'Oil on canvas', 
-          '1931'
-        ],
+          items: ['Painting', 'Oil on canvas', '1931'],
         },
         {
           name: 'The Starry Night',
@@ -1513,17 +1485,14 @@ router.get('/shophome', function (req, res) {
     navigation: {
       links: [
         {
-          
           text: 'Home',
           href: 'https://github.com/',
         },
         {
-          
           text: 'Contacts',
           href: 'https://www.google.com/',
         },
         {
-        
           text: 'Help',
           href: 'https://www.youtube.com/',
         },
@@ -2407,7 +2376,301 @@ router.get('/shopcart', function (req, res) {
 })
 
 // ================================================================
+// router.get Створює нам один ентпоїнт
 
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/shopprofile', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('shopprofile', {
+    layout: 'basic',
+    navigation: {
+      links: [
+        {
+          text: 'Home',
+          href: 'https://github.com/',
+        },
+        {
+          text: 'Contacts',
+          href: 'https://www.google.com/',
+        },
+        {
+          text: 'Help',
+          href: 'https://www.youtube.com/',
+        },
+      ],
+    },
+
+    header: 'Мої замовлення',
+
+    purchase: {
+      tabs: ['Всі замовлення', 'Гарантія та повернення'],
+      actionBlock: {
+        input: { placeholder: 'Placeholder' },
+        buttons: [
+          {
+            text: 'Знайти',
+            link: 'https://www.youtube.com/',
+            isSuccess: true,
+          },
+          {
+            text: 'Виділити все',
+            link: 'https://www.youtube.com/',
+            isOutline: true,
+          },
+          {
+            text: 'Очистити все',
+            link: 'https://www.youtube.com/',
+            isDanger: true,
+          },
+        ],
+      },
+      itemList: [
+        {
+          number: '№12587463 від 01.01.2023',
+          status: 'Виконано',
+          amount: { title: 'Сума', value: '25 000 ₴' },
+          images: ['https://picsum.photos/110/100'],
+          button: {
+            text: 'Детальніше',
+            link: 'https://www.youtube.com/',
+            isPrimary: true,
+          },
+        },
+        {
+          number: '№12587463 від 01.01.2023',
+          status: 'Виконано',
+          amount: { title: 'Сума:', value: '25 000 ₴' },
+          images: [
+            'https://picsum.photos/110/100',
+            'https://picsum.photos/110/100',
+            'https://picsum.photos/110/100',
+          ],
+          button: {
+            text: 'Детальніше',
+            link: 'https://www.youtube.com/',
+            isPrimary: true,
+          },
+        },
+        {
+          number: '№12587463 від 01.01.2023',
+          status: 'Виконано',
+          amount: { title: 'Сума', value: '25 000 ₴' },
+          images: [
+            'https://picsum.photos/110/100',
+            'https://picsum.photos/110/100',
+          ],
+          button: {
+            text: 'Детальніше',
+            link: 'https://www.youtube.com/',
+            isPrimary: true,
+          },
+        },
+      ],
+    },
+    userInfo: {
+      title: 'Особиста інформація',
+      profileData: {
+        title: 'Особисті дані',
+        fullName: {
+          surname: {
+            title: 'Прізвище',
+            value: 'Іванов',
+          },
+          name: {
+            title: 'Ім’я',
+            value: 'Іван',
+          },
+          middleName: {
+            title: 'По-батькові',
+            value: 'Іванович',
+          },
+        },
+        otherInfo: {
+          birthday: {
+            title: 'Дата народження',
+            value: '01.01.2000',
+          },
+          sex: {
+            title: 'Стать',
+            value: 'Чоловіча',
+          },
+          language: {
+            title: 'Мова',
+            value: 'Українська',
+          },
+        },
+      },
+      buttons: [
+        {
+          text: 'Редагувати',
+          link: 'https://www.youtube.com/',
+          isPrimary: true,
+        },
+        {
+          text: 'Очистити',
+          link: 'https://www.youtube.com/',
+          isSecondary: true,
+        },
+        {
+          text: 'Видалити',
+          link: 'https://www.youtube.com/',
+          isDanger: true,
+        },
+      ],
+      recipients: {
+        title: 'Отримувачі',
+        users: [
+          {
+            name: 'Іванов Іван Іванович',
+            phone: '+38 (098) 222 22 22',
+            button: {
+              text: 'Редагувати',
+              link: 'https://www.youtube.com/',
+            },
+          },
+          {
+            name: 'Петров Петро Петрович',
+            phone: '+38 (098) 111 11 11',
+            button: {
+              text: 'Редагувати',
+              link: 'https://www.youtube.com/',
+            },
+          },
+        ],
+      },
+      contacts: {
+        title: 'Контакти',
+        contactData: [
+          {
+            title: 'Номер телефону',
+            value: '+38 (098) 222 22 22',
+            button: {
+              text: 'Редагувати',
+              link: 'https://www.youtube.com/',
+              isPrimary: true,
+            },
+          },
+          {
+            title: 'Додатковий номер телефону',
+            value: '+38 (098) 111 11 11',
+            button: {
+              text: 'Очистити',
+              link: 'https://www.youtube.com/',
+              isSecondary: true,
+            },
+          },
+          {
+            title: 'Електронна адреса',
+            value: 'ivanivanov@ukr.net',
+            button: {
+              text: 'Видалити',
+              link: 'https://www.youtube.com/',
+              isDanger: true,
+            },
+          },
+        ],
+      },
+    },
+
+    footer: [
+      [
+        {
+          text: 'Home',
+          link: 'https://www.youtube.com/',
+        },
+        {
+          text: 'Trending',
+          link: 'https://www.youtube.com/feed/trending',
+        },
+        {
+          text: 'Subscriptions',
+          link: 'https://www.youtube.com/feed/subscriptions',
+        },
+        {
+          text: 'Library',
+          link: 'https://www.youtube.com/feed/library',
+        },
+      ],
+      [
+        {
+          text: 'History',
+          link: 'https://www.youtube.com/feed/history',
+        },
+        {
+          text: 'Your Videos',
+          link: 'https://www.youtube.com/feed/my_videos',
+        },
+        {
+          text: 'Live',
+          link: 'https://www.youtube.com/live',
+        },
+        {
+          text: 'Settings',
+          link: 'https://www.youtube.com/account',
+        },
+      ],
+      [
+        {
+          text: 'Watch Later',
+          link: 'https://www.youtube.com/playlist?list=WL',
+        },
+        {
+          text: 'Liked Videos',
+          link: 'https://www.youtube.com/playlist?list=LL',
+        },
+        {
+          text: 'Music',
+          link: 'https://www.youtube.com/music',
+        },
+        {
+          text: 'Gaming',
+          link: 'https://www.youtube.com/gaming',
+        },
+      ],
+      [
+        {
+          text: 'Sports',
+          link: 'https://www.youtube.com/channel/UCo_q6aOlvPH7M-j_XGWVgXg',
+        },
+        {
+          text: 'News',
+          link: 'https://www.youtube.com/news',
+        },
+        {
+          text: 'Fashion & Beauty',
+          link: 'https://www.youtube.com/channel/UC1x8rV_f-2yPpzlN0JWZXIQ',
+        },
+        {
+          text: 'Learning',
+          link: 'https://www.youtube.com/learning',
+        },
+      ],
+      [
+        {
+          text: 'Report History',
+          link: 'https://www.youtube.com/feed/history/report_history',
+        },
+        {
+          text: 'Help',
+          link: 'https://support.google.com/youtube/?hl=en',
+        },
+        {
+          text: 'Send Feedback',
+          link: 'https://support.google.com/youtube/answer/4347644?hl=en',
+        },
+        {
+          text: 'About',
+          link: 'https://www.youtube.com/about/',
+        },
+      ],
+    ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
 
 // ================================================================
 // Підключаємо роутер до бек-енду
