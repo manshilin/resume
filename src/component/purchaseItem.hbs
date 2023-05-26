@@ -1,0 +1,26 @@
+ <div class="row">
+                <div class="col-3">
+                    <h5>{{this.number}}</h5> 
+                    <div> <h4>{{this.status}}</h4> </strong> </div> 
+                </div>
+                <div class="col-3">
+                   <p>{{this.amount.title}}</p> 
+                   <h4>{{this.amount.value}}</h4> 
+
+                </div>
+                <div class="col-3">
+                    {{#each this.images}}
+                    <img src="{{this}}" alt="">
+                       
+                    {{/each}}
+                </div>
+
+                <div class="col-2">
+                    <h5></h5>
+                    <a href="button.link" class="btn 
+                    {{#if button.isPrimary}} btn-primary {{/if}}"> <h5>{{button.text}}</h5> </a>
+
+                </div>
+
+            </div>
+          <hr> 

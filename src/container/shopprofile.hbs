@@ -1,0 +1,154 @@
+<main>
+    <section>
+    {{#with navigation}}
+        <div class="row card">
+            <div class="col-12">
+                <ul class="nav">
+                    {{#each links}}
+                    <li class="nav-item">
+                        <a href="{{href}}" class="nav-link
+                                {{#if @last}} disabled {{/if}}
+                                ">
+                            <h5>{{text}}</h5>
+                        </a>
+
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    {{/with}}
+
+        {{!-- Block purchase --}}
+        <h1 class="my-5">{{header}}</h1>
+{{#with purchase}}
+        <ul class="nav nav-tabs mb-5">
+            {{#each tabs}}
+            <li class="nav-link {{#if @last}} disabled text-primary {{else}} active {{/if}} ">
+                <h5>{{this}}</h5>
+            </li>
+
+            {{/each}}
+        </ul>
+    {{#with actionBlock}}
+        <div class="row">
+
+            <div class="col-8">
+                <input type="text" class="me-3" placeholder="{{input.placeholder}}">
+                {{#each buttons}}
+
+                <a href="{{link}}" class="btn me-3
+                    {{#if isSuccess}} btn-success {{/if}}
+                    {{#if isOutline}} btn-outline-success {{/if}}
+                    {{#if isDanger}} btn-danger {{/if}}">
+                    <h5>{{text}}</h5>
+                </a>
+                {{/each}}
+            </div>
+        </div>
+    {{/with}}
+      
+    </section>
+<hr>
+    <section class="itemList">
+        {{#each itemList}}
+
+           {{> purchaseItem}}
+          
+        {{/each}}
+        
+          <hr class="mt-5">
+          
+    </section>
+ {{!-- with purchase --}}
+ {{/with}} 
+
+ <section class="userInfo">
+
+    {{#with userInfo}}
+
+    <h1>{{title}}</h1>
+    <div class="card">
+        
+        {{#with profileData}}
+        <h2 class="m-3">{{title}}</h2>
+        <div class="card m-3">
+                <div class="row">
+                    
+                    <div class="col-4">
+                       <h5 class="m-3">{{fullName.surname.title}}</h5> 
+                       <h5 class="m-3"><strong>{{fullName.surname.value}}</strong> </h5> 
+                    </div>
+                    <div class="col-4">
+                      <h5 class="m-3">{{fullName.name.title}}</h5>  
+                      <h5 class="m-3"><strong>{{fullName.name.value}}</strong></h5>  
+                    </div>
+                    <div class="col-4">
+                      <h5 class="m-3">{{fullName.middleName.title}}</h5>  
+                     <h5 class="m-3"><strong>{{fullName.middleName.value}}</strong></h5>  
+                    </div>
+                </div>
+        </div>
+
+        <div class="card m-3">
+                <div class="row">
+                    
+                    <div class="col-4">
+                       <h5 class="m-3">{{otherInfo.birthday.title}}</h5> 
+                       <h5 class="m-3"><strong>{{otherInfo.birthday.value}}</strong> </h5> 
+                    </div>
+                    <div class="col-4">
+                      <h5 class="m-3">{{otherInfo.sex.title}}</h5>  
+                      <h5 class="m-3"><strong>{{otherInfo.sex.value}}</strong></h5>  
+                    </div>
+                    <div class="col-4">
+                      <h5 class="m-3">{{otherInfo.language.title}}</h5>  
+                     <h5 class="m-3"><strong>{{otherInfo.language.value}}</strong></h5>  
+                    </div>
+                </div>
+        </div>
+        {{!-- {{#with userInfo}} --}}
+        {{/with}} 
+
+        <div class="card m-3">
+                <div class="row">
+               
+                      {{#each buttons}}
+                      <div class="col-4">
+                      <a href="{{this.link}}" class="btn 
+                      {{#if this.isPrimary}} btn-primary {{/if}}
+                      {{#if this.isSecondary}} btn-secondary {{/if}}
+                      {{#if this.isDanger}} btn-danger {{/if}}">
+                      <h5>{{this.text}}</h5> 
+                      </a>
+                      </div>   
+                      {{/each}}  
+                    
+                </div>
+        </div>
+       
+    </div>
+   
+
+    {{/with}}
+
+ </section>
+
+ <footer>
+    <div class="row">
+        {{#each footer}}
+        <div class="col-2">
+            
+            {{#each this}}
+            <div class="nav">
+        
+                <li class="nav-item">
+                  <a href="link" class="nav-link {{#if @last}} disabled {{/if}}"><h5>{{text}}</h5> </a> 
+                </li>
+             </div> 
+            {{/each}}
+          </div>
+        {{/each}}
+    </div>
+ </footer>
+    </main>
