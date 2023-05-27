@@ -1,0 +1,197 @@
+<main>
+    <section class="navigation">
+        {{#with navigation}}
+        <div class="row">
+            <div class="col-12 card">
+                <div class="nav">
+
+                    {{#each links}}
+                    <li class="nav-item">
+                        <a href="{{this.link}}" class="nav-link">
+                            <h5>{{this.text}}</h5>
+                        </a>
+                    </li>
+
+
+                    {{/each}}
+
+
+                </div>
+            </div>
+
+        </div>
+
+        {{/with}}
+
+    </section>
+
+    <section class="ps-0">
+
+        <nav aria-label="breadcrumb" class="ms-0">
+            <ol class="breadcrumb">
+                {{#each breadcrumb}}
+                <li class="breadcrumb-item {{#if @last}}active  {{/if}}" {{!-- как сделать темній цвет у активного
+                    элимента? --}} aria-current="page">
+                    <a href="{{this.url}}">
+                        {{this.name}}
+                    </a>
+                </li>
+
+                {{/each}}
+            </ol>
+
+        </nav>
+    </section>
+    <section>
+        <div class="row">
+
+            <h1 class="mb-5">{{header}}</h1>
+            {{#each sortBlock}}
+            <div class="col-3">
+                <select name="" id="">
+                    <option value="" disabled selected> {{this.placeholder}} </option>
+                    {{#each options}}
+                    <option value="{{value}}">{{text}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            {{/each}}
+
+        </div>
+    </section>
+
+    <section>
+
+        <div class="row ">
+            {{#with filterBlock}}
+            <div class="col-4 card">
+
+                <div class="col-12">
+                    <h5>{{sellers.title}}</h5>
+                    {{#each sellers.list}}
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <h5>{{this.value}}</h5>
+                        </label>
+
+                    </div>
+
+                    {{/each}}
+                    <hr>
+                </div>
+                <div class="col-12">
+                    {{#with brands}}
+                    <h5>{{title}}</h5>
+                    <input type="text" placeholder="{{input.placeholder}}" class="form-control">
+                    {{#each options}}
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDef">
+                        <label class="form-check-label" for="flexCheckDef">
+                            <h5>{{this.value}}</h5>
+                        </label>
+
+                    </div>
+                    {{/each}}
+                    {{/with}}
+                    <hr>
+                </div>
+
+                <div class="col-12">
+                    {{#with price}}
+                    <h5>{{title}}</h5>
+                    <form action="#" class="mb-3 me-3">
+                        <input type="text" class="form-control" placeholder="{{range.from}}">
+                    </form>
+
+                    <form action="#" class="mb-3 me-3">
+                        <input type="text" class="form-control" placeholder="{{range.to}}">
+                    </form>
+                    <div class="mb-2">
+                        <a href="{{button.link}}" class="btn btn-outline-secondary">
+                            <h5>{{button.text}}</h5>
+                        </a>
+                    </div>
+                    {{/with}}
+
+                </div>
+                <hr>
+                <div class="12">
+                    {{#each filterList}}
+                    <h5>{{this.title}}</h5>
+
+                    {{#each options}}
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                        <label class="form-check-label" for="flexCheck">
+                            <h6>{{value}}</h6>
+                        </label>
+
+                    </div>
+                    {{/each}}
+
+                    <hr>
+
+                    {{/each}}
+
+                </div>
+
+            </div>
+            {{/with}} {{!-- {{#with filterBlock}} --}}
+
+            {{#each goodsList}}
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-6 card">
+
+                        <img src="{{img}}" alt="" class="card-img-top">
+                        <div>
+                            {{#if isNew}}<span class="badge bg-primary rounded-pill">New</span>{{/if}}
+                            {{#if isHot}}<span class="badge bg-danger rounded-pill">Hot</span>{{/if}}
+                            {{#if isFree}}<span class="badge bg-success rounded-pill">Free</span>{{/if}}
+                            {{#if isFast}}<span class="badge bg-info rounded-pill">Fast</span>{{/if}}
+                        </div>
+
+
+
+                        <h4 class="card-title">{{name}}</h4>
+                        <p>{{review.amount}}-{{review.text}}</p>
+                        <h4>{{price}}</h4>
+                        <p>{{delivery}}</p>
+                        {{#each buttons}}
+
+                        <div class="mb-2">
+                            <a href="{{link}}" class="btn
+                            {{#if isPrimary}} btn-primary
+                            {{else}} btn-secondary {{/if}}">
+                                <h5>{{text}}</h5>
+                            </a>
+                        </div>
+
+                        {{/each}}
+
+                        {{#each characteristics}}
+                        <ul>
+                            <li>{{title}}:{{value}}</li>
+                        </ul>
+
+                        {{/each}}
+
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        {{/each}}
+
+        </div>
+
+
+    </section>
+</main>
