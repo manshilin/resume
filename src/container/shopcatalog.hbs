@@ -66,83 +66,80 @@
             {{#with filterBlock}}
             <div class="col-4 card">
 
-                <div class="col-12">
-                    <h5>{{sellers.title}}</h5>
-                    {{#each sellers.list}}
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                            <h5>{{this.value}}</h5>
-                        </label>
 
-                    </div>
-
-                    {{/each}}
-                    <hr>
-                </div>
-                <div class="col-12">
-                    {{#with brands}}
-                    <h5>{{title}}</h5>
-                    <input type="text" placeholder="{{input.placeholder}}" class="form-control">
-                    {{#each options}}
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDef">
-                        <label class="form-check-label" for="flexCheckDef">
-                            <h5>{{this.value}}</h5>
-                        </label>
-
-                    </div>
-                    {{/each}}
-                    {{/with}}
-                    <hr>
-                </div>
-
-                <div class="col-12">
-                    {{#with price}}
-                    <h5>{{title}}</h5>
-                    <form action="#" class="mb-3 me-3">
-                        <input type="text" class="form-control" placeholder="{{range.from}}">
-                    </form>
-
-                    <form action="#" class="mb-3 me-3">
-                        <input type="text" class="form-control" placeholder="{{range.to}}">
-                    </form>
-                    <div class="mb-2">
-                        <a href="{{button.link}}" class="btn btn-outline-secondary">
-                            <h5>{{button.text}}</h5>
-                        </a>
-                    </div>
-                    {{/with}}
+                <h5>{{sellers.title}}</h5>
+                {{#each sellers.list}}
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        <h5>{{this.value}}</h5>
+                    </label>
 
                 </div>
+
+                {{/each}}
                 <hr>
-                <div class="12">
-                    {{#each filterList}}
-                    <h5>{{this.title}}</h5>
 
-                    {{#each options}}
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
-                        <label class="form-check-label" for="flexCheck">
-                            <h6>{{value}}</h6>
-                        </label>
 
-                    </div>
-                    {{/each}}
-
-                    <hr>
-
-                    {{/each}}
+                {{#with brands}}
+                <h5>{{title}}</h5>
+                <input type="text" placeholder="{{input.placeholder}}" class="form-control">
+                {{#each options}}
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDef">
+                    <label class="form-check-label" for="flexCheckDef">
+                        <h5>{{this.value}}</h5>
+                    </label>
 
                 </div>
+                {{/each}}
+                {{/with}}
+                <hr>
+
+
+
+                {{#with price}}
+                <h5>{{title}}</h5>
+                <form action="#" class="mb-3 me-3">
+                    <input type="text" class="form-control" placeholder="{{range.from}}">
+                </form>
+
+                <form action="#" class="mb-3 me-3">
+                    <input type="text" class="form-control" placeholder="{{range.to}}">
+                </form>
+                <div class="mb-2">
+                    <a href="{{button.link}}" class="btn btn-outline-secondary">
+                        <h5>{{button.text}}</h5>
+                    </a>
+                </div>
+                {{/with}}
+
+
+                <hr>
+
+                {{#each filterList}}
+                <h5>{{this.title}}</h5>
+
+                {{#each options}}
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                    <label class="form-check-label" for="flexCheck">
+                        <h6>{{value}}</h6>
+                    </label>
+
+                </div>
+                {{/each}}
+
+                <hr>
+                {{/each}}
 
             </div>
             {{/with}} {{!-- {{#with filterBlock}} --}}
-
-            {{#each goodsList}}
             <div class="col-8">
                 <div class="row">
-                    <div class="col-6 card">
+
+                    {{#each goodsList}}
+                    <div class="col-5 m-3 mt-0 card">
 
                         <img src="{{img}}" alt="" class="card-img-top">
                         <div>
@@ -151,8 +148,6 @@
                             {{#if isFree}}<span class="badge bg-success rounded-pill">Free</span>{{/if}}
                             {{#if isFast}}<span class="badge bg-info rounded-pill">Fast</span>{{/if}}
                         </div>
-
-
 
                         <h4 class="card-title">{{name}}</h4>
                         <p>{{review.amount}}-{{review.text}}</p>
@@ -167,31 +162,52 @@
                                 <h5>{{text}}</h5>
                             </a>
                         </div>
-
                         {{/each}}
-
                         {{#each characteristics}}
                         <ul>
                             <li>{{title}}:{{value}}</li>
                         </ul>
-
                         {{/each}}
-
-
                     </div>
+                    {{/each}}
                 </div>
-
-
             </div>
+        </div>
+        </div>
+    </section>
 
+    <section>
+
+        <div class="alert text-center" style="background: green;">
+            <h2 class="text-light">{{service.title}}</h2>
+            <p class="text-light">{{service.description}}</p>
+            {{#each service.buttons}}
+
+            <a href="{{this.link}}" class="btn btn-primary">
+                <h5>{{this.text}}</h5>
+            </a>
+            {{/each}}
 
         </div>
-
-
-        {{/each}}
-
-        </div>
-
-
     </section>
 </main>
+<footer>
+    <div class="row">
+        {{#each footer}}
+    
+            <ul class="nav">
+                {{#each this}}
+                <div class="col-3">
+                <li class="item">
+                    <a href="{{link}}" class="nav-link">
+                        <h5>{{text}}</h5>
+                    </a>
+                </li> 
+                 </div>
+                {{/each}}
+            </ul>
+      
+        {{/each}}
+
+    </div>
+</footer>
