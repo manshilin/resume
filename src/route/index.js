@@ -6,8 +6,8 @@ const router = express.Router()
 // ================================================================
 var header = {
   name: {
-    firstname: 'Vasil',
-    lastname: 'Karpenko',
+    firstname: 'Sergii',
+    lastname: 'Manshylin',
     position: 'Junior Fullstack JS Developer',
     salary: '600$ в місяц',
     address: 'Kyiv, Velika Zchitomirska, 33',
@@ -17,15 +17,15 @@ var header = {
 var footer = {
   social: {
     email: {
-      href: 'mailto:dmytro@mail.com',
-      text: 'vasil@mail.com',
+      href: 'mailto:sergeymanshilin@gmail.com',
+      text: 'sergeymanshilin@gmail.com',
     },
     phone: {
-      href: 'tel:+380670000123',
-      text: '+380503663252',
+      href: 'tel:+380503663220',
+      text: '+380503663220',
     },
     linkedin: {
-      href: 'https://www.linkedin.com/in/dmytro-test',
+      href: 'https://www.linkedin.com/in/%D0%BC%D0%B0%D0%BD%D1%88%D0%B8%D0%BB%D0%B8%D0%BD-%D1%81%D0%B5%D1%80%D0%B3%D0%B5%D0%B9-1b6b087b/',
       text: 'LinkedIn',
     },
   },
@@ -39,7 +39,39 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+    name: 'Sergii Manshylin',
+    resume: 'Resume project',
+    title: 'Список сторінок',
+    discription: {
+      text: `Тут вам потрібно написати інформацію про ваш проєкт.
+      Поки що можна написати будь-який текст. Тут вам потрібно написати інформацію про ваш проєкт.
+      Поки що можна написати будь-який текст.Тут вам потрібно написати інформацію про ваш проєкт.
+      Поки що можна написати будь-який текст.Тут вам потрібно написати інформацію про ваш проєкт.
+      Поки що можна написати будь-який текст.`,
+    },
+    buttons: [
+      {text: 'Skills',
+      href:'http://localhost:3000/skills'
+    },
+    {
+      text: 'Summary',
+      href: 'http://localhost:3000/summary'
+    },
+    {
+      text: 'Education',
+      href: 'http://localhost:3000/education'
+    },
+    {
+      text: 'Work',
+      href: 'http://localhost:3000/work'
+    },
+
+    ]
+
+
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
@@ -78,6 +110,7 @@ router.get('/summary', function (req, res) {
 // ================================================================
 router.get('/skills', function (req, res) {
   res.render('skills', {
+    
     page: {
       title: 'Resume | Skills',
     },
@@ -190,7 +223,7 @@ router.get('/education', function (req, res) {
 
 router.get('/work', function (req, res) {
   res.render('work', {
-    layout: 'big',
+    
     page: {
       title: 'Resum | Work',
     },
