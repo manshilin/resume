@@ -6,8 +6,8 @@ const router = express.Router()
 // ================================================================
 var header = {
   name: {
-    firstname: 'Vasil',
-    lastname: 'Karpenko',
+    firstname: 'Sergii',
+    lastname: 'Manshylin',
     position: 'Junior Fullstack JS Developer',
     salary: '600$ в місяц',
     address: 'Kyiv, Velika Zchitomirska, 33',
@@ -17,15 +17,15 @@ var header = {
 var footer = {
   social: {
     email: {
-      href: 'mailto:dmytro@mail.com',
-      text: 'vasil@mail.com',
+      href: 'mailto:sergeymanshilin@gmail.com',
+      text: 'sergeymanshilin@gmail.com',
     },
     phone: {
-      href: 'tel:+380670000123',
-      text: '+380503663252',
+      href: 'tel:+380503663220',
+      text: '+380503663220',
     },
     linkedin: {
-      href: 'https://www.linkedin.com/in/dmytro-test',
+      href: 'https://www.linkedin.com/in/%D0%BC%D0%B0%D0%BD%D1%88%D0%B8%D0%BB%D0%B8%D0%BD-%D1%81%D0%B5%D1%80%D0%B3%D0%B5%D0%B9-1b6b087b/',
       text: 'LinkedIn',
     },
   },
@@ -39,7 +39,103 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+    name: 'Sergii Manshylin',
+    resume: 'Resume project',
+    title: 'Список сторінок',
+    discription: {
+      text: `Тут вам потрібно написати інформацію про ваш проєкт.
+      Поки що можна написати будь-який текст. Тут вам потрібно написати інформацію про ваш проєкт.
+      Поки що можна написати будь-який текст.Тут вам потрібно написати інформацію про ваш проєкт.
+      Поки що можна написати будь-який текст.Тут вам потрібно написати інформацію про ваш проєкт.
+      Поки що можна написати будь-який текст.`,
+    },
+    buttons: [
+      {text: 'Skills',
+      href:'/skills'
+    },
+    {
+      text: 'Summary',
+      href: '/summary'
+    },
+    {
+      text: 'Education',
+      href: '/education'
+    },
+    {
+      text: 'Work',
+      href: '/work'
+    },
+    {
+      text: 'Bio',
+      href: '/bio'
+    },
+    {
+      text: 'Car',
+      href: '/car'
+    },
+    {
+      text: 'facebook',
+      href: '/facebook'
+    },
+    {
+      text: 'Java script',
+      href: '/js'
+    },
+    {
+      text: 'Mac',
+      href: '/mac'
+    },
+    {
+      text: 'Person',
+      href: '/person'
+    },
+    {
+      text: 'Program',
+      href: '/program'
+    },
+    {
+      text: 'Shopcart',
+      href: '/shopcart'
+    },
+    {
+      text: 'Shopcatalog',
+      href: '/shopcatalog'
+    },
+    {
+      text: 'Shophome',
+      href: '/shophome'
+    },
+    {
+      text: 'Shoporder',
+      href: '/shoporder'
+    },
+    {
+      text: 'Shopprofile',
+      href: '/shopprofile'
+    },
+    {
+      text: 'Task21',
+      href: '/task21'
+    },
+    {
+      text: 'Task22',
+      href: '/task22'
+    },
+    {
+      text: 'Task31',
+      href: '/task31'
+    },
+    {
+      text: 'Web',
+      href: '/web'
+    },
+   
+    ]
+
+
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
@@ -78,6 +174,7 @@ router.get('/summary', function (req, res) {
 // ================================================================
 router.get('/skills', function (req, res) {
   res.render('skills', {
+    
     page: {
       title: 'Resume | Skills',
     },
@@ -190,7 +287,7 @@ router.get('/education', function (req, res) {
 
 router.get('/work', function (req, res) {
   res.render('work', {
-    layout: 'big',
+    
     page: {
       title: 'Resum | Work',
     },
