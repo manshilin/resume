@@ -53,21 +53,85 @@ router.get('/', function (req, res) {
     },
     buttons: [
       {text: 'Skills',
-      href:'http://localhost:3000/skills'
+      href:'/skills'
     },
     {
       text: 'Summary',
-      href: 'http://localhost:3000/summary'
+      href: '/summary'
     },
     {
       text: 'Education',
-      href: 'http://localhost:3000/education'
+      href: '/education'
     },
     {
       text: 'Work',
-      href: 'http://localhost:3000/work'
+      href: '/work'
     },
-
+    {
+      text: 'Bio',
+      href: '/bio'
+    },
+    {
+      text: 'Car',
+      href: '/car'
+    },
+    {
+      text: 'facebook',
+      href: '/facebook'
+    },
+    {
+      text: 'Java script',
+      href: '/js'
+    },
+    {
+      text: 'Mac',
+      href: '/mac'
+    },
+    {
+      text: 'Person',
+      href: '/person'
+    },
+    {
+      text: 'Program',
+      href: '/program'
+    },
+    {
+      text: 'Shopcart',
+      href: '/shopcart'
+    },
+    {
+      text: 'Shopcatalog',
+      href: '/shopcatalog'
+    },
+    {
+      text: 'Shophome',
+      href: '/shophome'
+    },
+    {
+      text: 'Shoporder',
+      href: '/shoporder'
+    },
+    {
+      text: 'Shopprofile',
+      href: '/shopprofile'
+    },
+    {
+      text: 'Task21',
+      href: '/task21'
+    },
+    {
+      text: 'Task22',
+      href: '/task22'
+    },
+    {
+      text: 'Task31',
+      href: '/task31'
+    },
+    {
+      text: 'Web',
+      href: '/web'
+    },
+   
     ]
 
 
